@@ -30,9 +30,6 @@ environment = SubResource("Environment_0ul5d")
 transform = Transform3D(-0.866023, -0.433016, 0.250001, 0, 0.499998, 0.866027, -0.500003, 0.749999, -0.43301, 0, 0, 0)
 shadow_enabled = true
 
-[node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.991018, 0.133727, 0, -0.133727, 0.991018, 2.08165e-12, 2, 4.634)
-
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 mesh = SubResource("PlaneMesh_s4ltc")
 
@@ -43,3 +40,4 @@ shape = SubResource("ConcavePolygonShape3D_2uiwq")
 
 [node name="Player" parent="." instance=ExtResource("1_oy6pl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.08165e-12, 2, 1.08261)
+top_level = true
