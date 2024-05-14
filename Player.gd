@@ -4,6 +4,9 @@ var mouse_sensitivity := 0.001
 var twist_input := 0.0
 var pitch_input := 0.0
 
+@onready var twist_pivot = $TwistPivot
+@onready var pitch_pivot = $TwistPivot/PitchPivot
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
@@ -18,7 +21,11 @@ func _process(delta):
 	if Input.is_action_just_pressed("ui_cancel"):
 		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 	
-	$TwistPivot.rotate_y(twist_input)
+	twist_pivot.rotate_y(twist_input)
+	pitch_pivot.rotate_x(pitch_input)
+	pitch_pivot.rotation.x = clamp(pitch_pivot.rotation.x, -0.5, 0.5)
+	twist_input = 0
+	pitch_input = 0
 	
 
 func _unhandled_input(event):
