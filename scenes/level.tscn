@@ -39,5 +39,5 @@ mesh = SubResource("PlaneMesh_s4ltc")
 shape = SubResource("ConcavePolygonShape3D_2uiwq")
 
 [node name="Player" parent="." instance=ExtResource("1_nirff")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.08165e-12, 1, 1.083)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.08165e-12, 1.2, 1.083)
 top_level = true
