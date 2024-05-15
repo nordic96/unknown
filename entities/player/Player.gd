@@ -1,6 +1,6 @@
 extends RigidBody3D
 
-const JUMP_FORCE = 4
+const JUMP_FORCE = 2
 
 var mouse_sensitivity := 0.001
 var twist_input := 0.0
